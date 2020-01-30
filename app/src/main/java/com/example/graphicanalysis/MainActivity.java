@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lecho.lib.hellocharts.model.Axis;
-import lecho.lib.hellocharts.model.AxisValue;
 import lecho.lib.hellocharts.model.Line;
 import lecho.lib.hellocharts.model.LineChartData;
 import lecho.lib.hellocharts.model.PointValue;
@@ -18,13 +17,13 @@ import lecho.lib.hellocharts.view.LineChartView;
 
 public class MainActivity extends AppCompatActivity {
     LineChartView consumptionTrend;
-    ArrayList<AxisValue> xAxisValueList;
+    List xAxisValueList;
     List<lecho.lib.hellocharts.model.PointValue> yAxisValueList;
     Line trendLine;
     LineChartData data;
     int[] yAxisData = {50, 20, 15, 30, 20, 60, 15, 40, 45, 10, 90, 18};
 
-    String[] axisData = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept",
+    String[] xAxisData = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept",
             "Oct", "Nov", "Dec"};
 
     @Override
@@ -36,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         trendLine = new Line(yAxisValueList).setColor(Color.parseColor("#9C27B0"));
         consumptionTrend = findViewById(R.id.graph_view);
         data = new LineChartData();
-//        addXAxisDataToXAxisValueList();
+        addXAxisDataToXAxisValueList();
         addYAxisDataToYAxisValueList();
         addGraphLinesToChatData();
         setHorizontalValues();
@@ -53,19 +52,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    private void addXAxisDataToXAxisValueList() {
-//        xAxisValueList = new ArrayList<>();
-//
-//
-//        if (axisData.length >0) {
-//            for (int i=0; i<axisData.length; i++) {
-//                xAxisValueList.add(1, new AxisValue(i).setLabel(axisData[i]));
+    private void addXAxisDataToXAxisValueList() {
+
+
+//        if (xAxisData.length>0) {
+//            for (int i=0; i<xAxisData.length; i++) {
+//                xAxisValueList.add(1, new AxisValue(i).setLabel(xAxisData[i]));
 //            }
 //
 //        }
-//
-//
-//    }
+
+
+    }
 
     private void addGraphLinesToChatData() {
         List<Line> lines = new ArrayList<>();

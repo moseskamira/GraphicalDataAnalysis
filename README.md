@@ -1,5 +1,5 @@
 # GraphicalDataAnalysis
-This project is intended to demonstrate the use of Graphs in Android Applications
+This is an Android mobile App intended to illustrate the use of Graphs in Data Analysis.
 
 ## Technology/Language
 - Android/Java
