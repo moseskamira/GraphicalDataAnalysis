@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     LineChartData data;
     int[] yAxisData = {50, 20, 15, 30, 20, 60, 15, 40, 45, 10, 90, 18};
 
+
+
     String[] xAxisData = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept",
             "Oct", "Nov", "Dec"};
 
@@ -30,12 +32,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         xAxisValueList = new ArrayList<>();
         yAxisValueList = new ArrayList<>();
         trendLine = new Line(yAxisValueList).setColor(Color.parseColor("#9C27B0"));
         consumptionTrend = findViewById(R.id.graph_view);
         data = new LineChartData();
         addXAxisDataToXAxisValueList();
+
         addYAxisDataToYAxisValueList();
         addGraphLinesToChatData();
         setHorizontalValues();
@@ -78,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setHorizontalValues() {
         Axis axis = new Axis();
-        axis.setValues(xAxisValueList);
+//        axis.setValues(xAxisValueList);
         axis.setTextSize(16);
         axis.setTextColor(Color.parseColor("#03A9F4"));
         data.setAxisXBottom(axis);
@@ -92,4 +96,6 @@ public class MainActivity extends AppCompatActivity {
         yAxis.setName("Rainfall Distribution in mm");
         data.setAxisYLeft(yAxis);
     }
+
+
 }
