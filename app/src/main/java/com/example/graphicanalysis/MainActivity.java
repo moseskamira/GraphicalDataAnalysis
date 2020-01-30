@@ -5,9 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Color;
 import android.os.Bundle;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import lecho.lib.hellocharts.model.Axis;
@@ -22,22 +20,17 @@ public class MainActivity extends AppCompatActivity {
     LineChartView consumptionTrend;
     ArrayList<AxisValue> xAxisValueList;
     List<lecho.lib.hellocharts.model.PointValue> yAxisValueList;
+    Line trendLine;
+    LineChartData data;
+    int[] yAxisData = {50, 20, 15, 30, 20, 60, 15, 40, 45, 10, 90, 18};
 
     String[] axisData = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept",
             "Oct", "Nov", "Dec"};
-
-    int[] yAxisData = {50, 20, 15, 30, 20, 60, 15, 40, 45, 10, 90, 18};
-    Line trendLine;
-    LineChartData data;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         xAxisValueList = new ArrayList<>();
         yAxisValueList = new ArrayList<>();
         trendLine = new Line(yAxisValueList).setColor(Color.parseColor("#9C27B0"));
@@ -80,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         data.setLines(lines);
         consumptionTrend.setLineChartData(data);
         Viewport viewport = new Viewport(consumptionTrend.getMaximumViewport());
-        viewport.top =110;
+        viewport.top =100;
         consumptionTrend.setMaximumViewport(viewport);
         consumptionTrend.setCurrentViewport(viewport);
     }
@@ -98,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         yAxis.setTextSize(16);
         yAxis.setTextColor(Color.parseColor("#03A9F4"));
         yAxis.setTextSize(16);
-        yAxis.setName("consumption in units");
+        yAxis.setName("Rainfall Distribution in mm");
         data.setAxisYLeft(yAxis);
     }
 }
