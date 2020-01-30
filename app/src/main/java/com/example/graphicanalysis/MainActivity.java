@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         xAxisValueList = new ArrayList<>();
         yAxisValueList = new ArrayList<>();
         trendLine = new Line(yAxisValueList).setColor(Color.parseColor("#9C27B0"));
