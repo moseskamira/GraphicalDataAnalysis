@@ -11,4 +11,4 @@ This is an Android mobile App intended to illustrate the use of Graphs in Data A
 
 ## Screenshots
 ### Line Graph
-![Line Graph](/images/Graph2.png)
+![Line Graph](/images/Graph3.png)
