@@ -64,11 +64,7 @@ public class MainActivity extends AppCompatActivity {
         initializeBarGraph();
 //        setBarGraphData();
         initializeBarGraphHorizontalLabels();
-
-
     }
-
-
 
 //    private void setBarGraphData() {
 //        barData = new BarData(initializeBarGraphHorizontalLabels(), initializeBarGraph());
@@ -83,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-
     }
 
     private void addXAxisDataToXAxisValueList() {
@@ -111,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
 //        axis.setValues(xAxisValueList);
         xAxis.setTextSize(16);
         xAxis.setTextColor(Color.parseColor("#03A9F4"));
-        xAxis.setName("Months In Numbers");
+        xAxis.setName("Months In Number");
         data.setAxisXBottom(xAxis);
 
     }
@@ -133,9 +128,7 @@ public class MainActivity extends AppCompatActivity {
         entries.add(new BarEntry(20f, 3));
         entries.add(new BarEntry(15f, 4));
         entries.add(new BarEntry(19f, 5));
-
         bardataset = new BarDataSet(entries, "Cells");
-
         return bardataset;
     }
 

@@ -4,7 +4,9 @@ This is an Android mobile App intended to illustrate the use of Graphs in Data A
 ## Technology/Language
 - Android/Java
 
-- Graph Library/lecho:hellocharts-library
+- Graph Library/lecho:hellocharts-library for Line Graphs
+
+- PhilJay:MPAndroidChart Library for Bar Graphs
 
 ## Project Development Objectives
 - To test the implementation of Graphs in Android Applications
